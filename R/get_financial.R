@@ -29,6 +29,10 @@ GetFinancial <- function(statement.type, symbol, year) {
           
           inst.url <- paste0("https://www.sec.gov/Archives/edgar/data/", CIK, "/", 
                              accession.no, "/", lower.symbol, "-", report.period, ".xml")
+          
+          #FilingsonEdgar <- edgarWebR::company_filings(x = "SBUX", type = "10-K")
+          #DocumentsonEdgar <-  edgarWebR::filing_documents(x = FilingsonEdgar$href[1])
+          #inst.url <- DocumentsonEdgar[DocumentsonEdgar[5] == 'XML', 4]
           return(inst.url)
      }
      
